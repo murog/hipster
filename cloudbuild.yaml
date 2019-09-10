@@ -1,0 +1,9 @@
+steps:
+- name: 'gcr.io/cloud-builders/kubectl'
+  args: ['config', 'current-context']
+- name: 'gcr.io/nomos-release/nomos:stable'
+  args: ['nomos', 'vet']
+options:
+    env:
+      - CLOUDSDK_COMPUTE_ZONE=us-central1-b
+      - CLOUDSDK_CONTAINER_CLUSTER=gcp
