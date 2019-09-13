@@ -62,6 +62,9 @@ metadata:
     heritage: "Helm"
 
 spec:
+  selector:
+    matchLabels:
+      app: mysql
   template:
     metadata:
       labels:
